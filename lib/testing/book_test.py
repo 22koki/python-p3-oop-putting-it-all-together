@@ -10,9 +10,10 @@ class TestBook:
 
     def test_has_title_and_page_count(self):
         '''has the title and page_count passed into __init__, and values can be set to new instance.'''
-        book = Book("And Then There Were None", 272)
+        book = Book("And Then There Were None", 272, 2022)
         assert(book.page_count == 272)
         assert(book.title == "And Then There Were None")
+        assert(book.publication_year == 2022)
 
     def test_requires_int_page_count(self):
         '''prints "page_count must be an integer" if page_count is not an integer.'''
